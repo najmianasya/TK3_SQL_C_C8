@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('auth/',include('authentication.urls'))
+    path('auth/',include('authentication.urls')),
+    path('history',include('history_rapat.urls'))
 ]
