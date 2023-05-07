@@ -27,5 +27,10 @@ urlpatterns = [
     path('list_pertandingan',include('list_pertandingan.urls')),
     path('pembelian_tiket/',include('pembelian_tiket.urls')),
     path('peminjaman_stadium/',include('peminjaman_stadium.urls')),
+<<<<<<< HEAD
+    path('pembuatan_pertandingan/',include('pembuatan_pertandingan.urls')),
+    path('mengelola_tim/',include('mengelola_tim.urls'))
+=======
     path('manage-pertandingan/', include('manage_pertandingan.urls'))
+>>>>>>> 2f769ba004fc83a228ec96f84b22db4c608365d2
 ]

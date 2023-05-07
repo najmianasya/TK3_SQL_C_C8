@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="#">U-League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard:show_dashboard_panitia' %}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rapat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manage Pertandingan</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="logout">
+          <button type="button" class="btn btn-outline-primary"><a href="{% url 'authentication:logout' %}">Logout</a></button>
+        </form>    
+      </div>
+    </div>
+</nav>
+<div class="container mt-5">
+    <h1 class="mb-4">Buat Pertandingan</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="main_referee">Pilih Wasit Utama:</label>
+            <select class="form-control" id="main_referee" name="main_referee">
+
+                    <option value="{{ referee.id }}">Kade</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="assistant_referee1">Pilih Wasit Pembantu/Hakim Garis:</label>
+            <select class="form-control" id="assistant_referee1" name="assistant_referee1">
+
+                    <option value="{{ referee.id }}">Nasya</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="assistant_referee2">Pilih Wasit Pembantu/Hakim Garis:</label>
+            <select class="form-control" id="assistant_referee2" name="assistant_referee2">
+
+                    <option value="{{ referee.id }}">Devina</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="reserve_referee">Pilih Wasit Cadangan:</label>
+            <select class="form-control" id="reserve_referee" name="reserve_referee">
+
+                    <option value="{{ referee.id }}">Reiou</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="team1">Tim 1:</label>
+            <select class="form-control" id="team1" name="team1">
+
+                    <option value="{{ team.id }}">a</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="team2">Tim 2:</label>
+            <select class="form-control" id="team2" name="team2">
+                    <option value="{{ team.id }}">b</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %}

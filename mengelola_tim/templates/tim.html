@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Tim</h1>
+    <h3>Pemain</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nama Pemain</th>
+                <th>No HP</th>
+                <th>Tanggal Lahir</th>
+                <th>Is Captain</th>
+                <th>Posisi</th>
+                <th>NPM</th>
+                <th>Jenjang</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ganti dengan loop pemain dari database -->
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>
+                    <a href="#" class="btn btn-primary">Make Captain</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Pelatih</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nama Pelatih</th>
+                <th>No HP</th>
+                <th>Email</th>
+                <th>Alamat</th>
+                <th>Spesialisasi</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ganti dengan loop pelatih dari database -->
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="#" class="btn btn-primary mr-2">Pemain</a>
+        <a href="#" class="btn btn-primary">Pelatih</a>
+    </div>
+</div>
+{% endblock content %}

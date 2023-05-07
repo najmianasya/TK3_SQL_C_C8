@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="#">U-League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard:show_dashboard_panitia' %}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rapat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manage Pertandingan</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="logout">
+          <button type="button" class="btn btn-outline-primary"><a href="{% url 'authentication:logout' %}">Logout</a></button>
+        </form>    
+      </div>
+    </div>
+</nav>
+<div class="container mt-5">
+    <h1 class="mb-4">Pembuatan Pertandingan</h1>
+    <form method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="stadium">Stadium:</label>
+            <select class="form-control" id="stadium" name="stadium">
+                {% for stadium in stadiums %}
+                <option value="{{ stadium.id }}">{{ stadium.name }}</option>
+                {% endfor %}
+                <option value="{{ stadium.id }}">Stadium Panda</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tanggal">Tanggal:</label>
+            <input type="date" class="form-control" id="tanggal" name="tanggal">
+        </div>
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+</div>
+{% endblock content %}
