@@ -21,3 +21,6 @@ def show_dashboard_penonton(request):
 
 def show_dashboard_panitia(request):
     return render(request, 'dashboard_panitia.html')
+
+def show_dashboard(request):
+    return render(request, 'baseAuth.html')

@@ -1,0 +1,106 @@
+{% extends 'baseAuth.html' %}
+
+{% load static %}
+
+{% block meta %}
+{%endblock meta%} 
+
+{% block content %} 
+
+<!-- Navbar Manajer -->
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="#">U-League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard:show_dashboard_manajer' %}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mengelola Tim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Peminjaman Stadium</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">List Pertandingan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">History Rapat</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="logout">
+          <button type="button" class="btn btn-outline-primary"><a href="{% url 'authentication:logout' %}">Logout</a></button>
+        </form>    
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+    <h1 class="mb-4" style="text-align:center;">Peminjaman Stadium</h1>
+    <table class="table table-borderless">
+        <tbody>
+            <tr>
+                <td scope="row">Stadium</td>
+                <td>  
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="Stadium BK">Stadium BK</option>
+                        <option value="Stadium GBK">Stadium GBK</option>
+                        <option value="Stadium MBK">Stadium MBK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">Tanggal</td>
+                <td>  
+                    <input type="date" class="form-control" id="tanggal">
+                </td>            
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#waktu_peminjaman" role="button">SUBMIT</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="waktu_peminjaman" tabindex="-1" aria-labelledby="addTaskLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">List Waktu Stadium BK</h1>
+        </div>
+        <div class="modal-body">
+          <table class="table table-borderless" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th scope="col">List Waktu</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07.00 - 09.00</td>
+                    <td><a href="{% url 'peminjaman_stadium:list_pemesanan' %}" class="btn btn-primary">Pesan</a></td>
+                </tr>
+                <tr>
+                    <td>13.00 - 15.00</td>
+                    <td><a href="{% url 'peminjaman_stadium:list_pemesanan' %}" class="btn btn-primary">Pesan</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %} 
