@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Beli Tiket</h2>
+    <form>
+        <div class="form-group">
+            <label for="jenis_tiket">Jenis Tiket:</label>
+            <select class="form-control" id="jenis_tiket">
+                <!-- Ganti opsi ini dengan daftar jenis tiket yang tersedia -->
+                <option>VIP</option>
+                <option>Main East</option>
+                <option>Kategori 1</option>
+                <option>Kategori 2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pembayaran">Pembayaran:</label>
+            <select class="form-control" id="pembayaran">
+                <!-- Ganti opsi ini dengan daftar jenis pembayaran yang tersedia -->
+                <option>Metode Pembayaran 1</option>
+                <option>Metode Pembayaran 2</option>
+                <option>Metode Pembayaran 3</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Beli</button>
+    </form>
+</div>
+{% endblock content %}
