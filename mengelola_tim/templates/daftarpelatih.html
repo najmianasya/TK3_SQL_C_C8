@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Daftar Pelatih</h2>
+    <form>
+        <div class="form-group">
+            <label for="pelatih">Pelatih yang mau didaftarkan:</label>
+            <select class="form-control" id="pelatih">
+                <!-- Ganti opsi ini dengan daftar pelatih yang tersedia -->
+                <option>Pelatih 1 - Spesialisasi 1</option>
+                <option>Pelatih 2 - Spesialisasi 2</option>
+                <option>Pelatih 3 - Spesialisasi 3</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %}
