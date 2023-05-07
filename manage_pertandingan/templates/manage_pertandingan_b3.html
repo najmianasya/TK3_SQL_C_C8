@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Manage Pertandingan</title>
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock meta %}
+
+{% block content %}
+<!-- Navbar Panitia -->
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="#">U-League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard:show_dashboard_panitia' %}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rapat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manage Pertandingan</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="logout">
+          <button type="button" class="btn btn-outline-primary"><a href="{% url 'authentication:logout' %}">Logout</a></button>
+        </form>    
+      </div>
+    </div>
+</nav>
+
+<!-- Tabel Pertandingan -->
+<div class="container mt-5">
+    <h1 class="mb-4">List Pertandingan</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th colspan="5">LIST PERTANDINGAN</th>
+            </tr>
+            <tr>
+                <th scope="col">Tim</th>
+                <th scope="col">Waktu</th>
+                <th scope="col">Pemenang</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A VS I</td>
+                <td>28 July 2023, 13:00</td>
+                <td>A</td>
+                <td>
+                    <table>
+                        <tr>
+                          <td><a href="#" class="btn btn-outline-primary btn-sm">Lihat Peristiwa Tim 1</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#" class="btn btn-outline-primary btn-sm">Lihat Peristiwa Tim 2</a></td>
+                        </tr>
+                      </table>
+                </td>
+            </tr>
+            <tr>
+                <td>? VS ?</td>
+                <td>[Waktu Dimulai -5 Menit]</td>
+                <td>-</td>
+                <td><a href="#" class="btn btn-outline-primary btn-sm">Mulai</a></td>
+            </tr>
+            <tr>
+                <td>? VS ?</td>
+                <td>10 July 2023, 12:00</td>
+                <td>-</td>
+                <td>Belum Waktunya</td>
+            </tr>
+            <tr>
+                <td colspan="5" align="center"><a href="#" class="btn btn-primary">Save</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

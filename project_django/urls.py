@@ -23,4 +23,5 @@ urlpatterns = [
     path('auth/',include('authentication.urls')),
     path('history',include('history_rapat.urls')),
     path('mulai-pertandingan/',include('mulai_pertandingan.urls')),
+    path('manage-pertandingan/', include('manage_pertandingan.urls'))
 ]
