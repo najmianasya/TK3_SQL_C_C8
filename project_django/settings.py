@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'example_app',
     'dashboard',
-    'authentication'
+    'authentication',
+    'history_rapat',
 ]
 
 MIDDLEWARE = [
