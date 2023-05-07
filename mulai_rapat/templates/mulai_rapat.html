@@ -1,0 +1,65 @@
+{% extends 'baseAuth.html' %}
+
+{% load static %}
+
+{% block meta %}
+{%endblock meta%} 
+
+{% block content %} 
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="#">U-League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rapat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manage Pertandingan</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="logout">
+          <button type="button" class="btn btn-outline-primary"><a href="#">Logout</a></button>
+        </form>    
+      </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="mb-4" style="text-align:center">Pilih Pertandingan</h1>
+    <table class="table table-hover"> 
+        <thead>
+            <tr style="background-color:#1D267D; color: #FFFFFF">
+                <th scope="col" >Tim Bertanding</th>
+                <th scope="col">Stadium</th>
+                <th scope="col">Tanggal dan Waktu</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">A vs B</th>
+                <td>Stadium GBK</td>
+                <td>5 Juli 2023, 07.00 - 09.00</td>
+                <td><a href="{% url 'mulai_rapat:show_isi_rapat' %}" class="btn btn-primary">Mulai Rapat</a></td>
+            </tr>
+            <tr>
+                <th scope="row">C vs D</th>
+                <td>Stadium GBK</td>
+                <td>7 Juli 2023, 13.00 - 15.00</td>
+                <td><a href="{% url 'mulai_rapat:show_isi_rapat' %}" class="btn btn-primary">Mulai Rapat</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+{% endblock content %} 

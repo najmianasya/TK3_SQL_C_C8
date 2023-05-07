@@ -1,0 +1,63 @@
+{% extends 'baseAuth.html' %}
+
+{% load static %}
+
+{% block meta %}
+{%endblock meta%} 
+
+{% block content %} 
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="#">U-League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rapat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manage Pertandingan</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="logout">
+          <button type="button" class="btn btn-outline-primary"><a href="#">Logout</a></button>
+        </form>    
+      </div>
+    </div>
+</nav>
+
+<div style="border-radius: 25px; background: #edebeb; margin: 60px; padding: 5px; color: #011B10;">
+
+    <div class="position-relative mx-auto container flex flex-col gap-4 pt-8" style="margin-top: 15px; text-align: center">
+        <div class ="rounded-lg p-4 flex flex-col gap-4 mx-auto bg-base-100;" >
+        
+            <h1 style="padding-bottom: 10px;" class="fw-semibold text-center">Rapat Pertandingan [?] VS [?]</h1>
+        
+            <form style="display: inline-block;">
+                <table>
+                    <tr>
+                        <th scope="row">Isi Rapat</th>
+                        <td></td>
+                        <td><textarea rows="5" cols="45"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input id="pickup-btn" style="width: 100%; margin-top: 20px; margin-bottom: 7px;" class="btn btn btn-primary" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+           
+        </div>
+    </div>
+    </div>
+
+
+
+{% endblock content %} 
