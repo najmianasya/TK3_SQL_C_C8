@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Dashboard</title>
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock meta %}
+
+{% block content %}
+<!-- Profile Card -->
+<div class="container-fluid d-flex align-items-center justify-content-center my-4">
+    <div class="card p-3 shadow">
+        <div class="card-body" id="profile-card">
+        </div>
+    </div>
+</div>
+{% endblock content %}
