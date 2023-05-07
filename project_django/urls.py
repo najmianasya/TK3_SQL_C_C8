@@ -26,5 +26,6 @@ urlpatterns = [
     path('mulai_rapat/',include('mulai_rapat.urls')),
     path('list_pertandingan',include('list_pertandingan.urls')),
     path('pembelian_tiket/',include('pembelian_tiket.urls')),
-    path('peminjaman_stadium/',include('peminjaman_stadium.urls'))
+    path('peminjaman_stadium/',include('peminjaman_stadium.urls')),
+    path('manage-pertandingan/', include('manage_pertandingan.urls'))
 ]
