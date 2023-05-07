@@ -12,3 +12,6 @@ def list_waktu(request):
 
 def list_pertandingan(request):
     return render(request,'list_pertandingan_beli.html')
+
+def belitiket(request):
+    return render(request,'belitiket.html')
