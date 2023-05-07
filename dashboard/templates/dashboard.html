@@ -4,6 +4,7 @@
 {% block meta %}
 <title>Dashboard</title>
 <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+<script src="https://kit.fontawesome.com/ff49bbe5ae.js" crossorigin="anonymous"></script>
 {% endblock meta %}
 
 {% block content %}
@@ -11,6 +12,31 @@
 <div class="container-fluid d-flex align-items-center justify-content-center my-4">
     <div class="card p-3 shadow">
         <div class="card-body" id="profile-card">
+            <div class="info-column mx-3 mb-3">
+                <div class="row">
+                    <p class="h4 card-title my-4">[First] [Last]</p>
+                    <p class="h7 text-muted">
+                        <i class="fa-solid fa-phone"></i>
+                        Nomor HP
+                    </p>
+                    <p class="h7 text-muted">
+                        <i class="fa-solid fa-envelope"></i>
+                        Email
+                    </p>
+                    <p class="h7 text-muted">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Alamat
+                    </p>
+                    <p class="h7 text-muted">
+                        <i class="fa-solid fa-user-tag"></i>
+                        Status
+                    </p>
+                    <p class="h7 text-muted">
+                        <i class="fa-solid fa-user"></i>
+                        Jabatan
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
