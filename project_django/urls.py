@@ -21,5 +21,6 @@ urlpatterns = [
     path('', include('example_app.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('auth/',include('authentication.urls')),
-    path('history',include('history_rapat.urls'))
+    path('history',include('history_rapat.urls')),
+    path('mulai-pertandingan/',include('mulai_pertandingan.urls')),
 ]
