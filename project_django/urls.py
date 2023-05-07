@@ -22,6 +22,7 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('auth/',include('authentication.urls')),
     path('history',include('history_rapat.urls')),
+    path('mulai_rapat/',include('mulai_rapat.urls')),
     path('list_pertandingan',include('list_pertandingan.urls')),
     path('pembelian_tiket/',include('pembelian_tiket.urls'))
 ]
