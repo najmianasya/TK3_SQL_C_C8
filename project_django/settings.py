@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'dashboard',
     'authentication',
     'history_rapat',
+    'list_pertandingan',
 ]
 
 MIDDLEWARE = [
